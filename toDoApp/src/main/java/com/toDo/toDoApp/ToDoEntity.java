@@ -11,7 +11,7 @@ public class ToDoEntity {
 	@GeneratedValue
 	private Long id;
 	private String value;
-	private boolean isCompleted;
+	private boolean completed;
 	public Long getId() {
 		return id;
 	}
@@ -24,17 +24,18 @@ public class ToDoEntity {
 	public void setValue(String value) {
 		this.value = value;
 	}
+	
 	public boolean isCompleted() {
-		return isCompleted;
+		return completed;
 	}
-	public void setCompleted(boolean isCompleted) {
-		this.isCompleted = isCompleted;
+	public void setCompleted(boolean completed) {
+		this.completed = completed;
 	}
 	public ToDoEntity(Long id, String value, boolean isCompleted) {
 		super();
 		this.id = id;
 		this.value = value;
-		this.isCompleted = isCompleted;
+		this.completed = isCompleted;
 	}
 	public ToDoEntity() {
 		super();
