@@ -41,7 +41,7 @@ public class ToDoResource {
 		Optional<ToDoEntity> toDoEntity = doRepository.findById(id);
 
 		 if (!toDoEntity.isPresent())
-			 throw new Exception("id-" + id);
+			 throw new ToDoNotFoundException("id-" + id);
 		return toDoEntity.get();
 	}
 	
